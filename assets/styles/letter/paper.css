@@ -1,0 +1,124 @@
+.eucalipto {
+  position: absolute;
+  width: 279px;
+  height: 328px;
+  z-index: 1;
+}
+
+#eucalipto-1 {
+  top: -50px;
+  left: -50px;
+  transform: rotate(15deg) scaleY(-1);
+}
+#eucalipto-2 {
+  bottom: -70px;
+  right: -50px;
+  transform: rotate(-125deg);
+}
+
+#letter .paper {
+  display: inline-block;
+  padding: 120px 24px;
+  box-sizing: border-box;
+  margin: 24px;
+  border: 4px solid rgb(51 61 50 / 0.5);
+  height: calc(100% - 40px - 8px);
+  width: calc(100% - 40px - 8px);
+}
+#letter .paper .content {
+  margin: 0 auto;
+  max-width: 540px;
+}
+
+.escritura {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.75rem;
+  color: var(--color-txt);
+}
+.versiculo {
+  font-size: 0.85rem;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--color-txt);
+}
+.bencao {
+  margin: 2.5rem auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--color-txt);
+}
+
+.pais-group {
+  margin: 2.5rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--color-txt);
+}
+.pais-group .pais-esq {
+  text-align: left;
+}
+.pais-group .pais-dir {
+  text-align: right;
+}
+.noivos {
+  margin: 4rem auto 2.5rem;
+  text-align: center;
+  color: #9da37b;
+  font-size: 4rem;
+}
+.invitation {
+  font-size: 0.85rem;
+  width: 80%;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: var(--color-txt);
+}
+
+.data-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.5rem;
+}
+.data {
+  width: 160px;
+  text-align: center;
+  margin: 0;
+  line-height: 14px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-txt);
+}
+.data.dia {
+  font-size: 2.625rem;
+  color: var(--color-accent);
+}
+.btn-block {
+  display: block;
+  text-align: center;
+}
+.btn {
+  background: var(--color-accent);
+  color: #d9d9d9;
+  font-size: 0.875rem;
+  padding: 12px 36px;
+  border: none;
+  margin: 4rem auto 0;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+@media (max-width: 1023px) {
+  .eucalipto {
+    width: 209.25px;
+    height: 246px;
+  }
+  .invitation,
+  .pais-group {
+    font-size: 0.75rem;
+  }
+}

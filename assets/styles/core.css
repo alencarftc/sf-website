@@ -1,0 +1,65 @@
+:root {
+  --color-env: hsl(40, 100%, 25%);
+  --color-env2: hsl(40, 100%, 27%);
+  --color-flap: hsl(40, 100%, 10%);
+  --color-bg: #333d32;
+  --color-heart: #d00000;
+  --color-accent: rgb(157, 163, 123);
+  --color-txt: rgba(24, 35, 24, 0.8);
+
+  --env-border-radius: 8px;
+  --env-width: 500px;
+  --env-height: calc(var(--env-width) / 2);
+  --env-border-width: calc(var(--env-width) / 3);
+  --env-border-height: calc(var(--env-height) / 3);
+  --heart-width: 80px;
+}
+
+@media screen and (max-width: 520px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+}
+
+.reset {
+  text-align: center;
+}
+.reset button {
+  font-weight: 800;
+  font-style: normal;
+  transition: all 0.1s linear;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: solid 2px var(--color-env);
+  border-radius: 4px;
+  color: var(--color-env);
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 5px;
+  padding: 10px;
+  line-height: 1em;
+  text-decoration: none;
+  min-width: 120px;
+  cursor: pointer;
+}
+.reset button:hover {
+  background-color: var(--color-env);
+  color: #fff;
+}
+
+.ff-cursive {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ff-serif {
+  font-family: "Cantata One", serif;
+  font-weight: 400;
+  font-style: normal;
+}

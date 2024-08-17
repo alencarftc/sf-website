@@ -1,13 +1,14 @@
 window.onload = function () {
-  var envelope = document.querySelector("#envelope");
+  const letter = document.querySelector("#letter");
+  const envelope = document.querySelector("#envelope")
 
   envelope.addEventListener("click", function () {
-    const isOpen = envelope.classList.contains("open");
-    const act = isOpen ? close : open;
-    act();
+    open();
   });
 
   function open() {
+    letter.classList.add("open")
+    letter.classList.remove("close")
     envelope.classList.add("open");
     envelope.classList.remove("close");
   }
