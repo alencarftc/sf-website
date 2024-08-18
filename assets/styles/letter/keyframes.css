@@ -1,0 +1,54 @@
+@keyframes eucaliptoFadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) rotate(15deg) scaleY(-1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0) rotate(15deg) scaleY(-1);
+    transform: translateY(0) rotate(15deg) scaleY(-1);
+  }
+}
+@keyframes eucaliptoFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0) rotate(15deg) scaleY(-1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0) rotate(-125deg);
+  }
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -80vh;
+  }
+}
+@keyframes slideUp {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -80vh;
+  }
+}
+@-webkit-keyframes sideSway {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+@keyframes sideSway {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}

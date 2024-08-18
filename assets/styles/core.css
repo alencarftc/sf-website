@@ -1,7 +1,7 @@
 :root {
-  --color-env: hsl(40, 100%, 25%);
-  --color-env2: hsl(40, 100%, 27%);
-  --color-flap: hsl(40, 100%, 10%);
+  --color-env: hsl(50, 50%, 35%);
+  --color-env2: hsl(50, 50%, 37%);
+  --color-flap: hsl(50, 50%, 20%);
   --color-bg: #333d32;
   --color-heart: #d00000;
   --color-accent: rgb(157, 163, 123);
@@ -11,7 +11,9 @@
   --env-width: 500px;
   --env-height: calc(var(--env-width) / 2);
   --env-border-width: calc(var(--env-width) / 3);
-  --env-border-height: calc(var(--env-height) / 3);
+  --env-border-height: calc(var(--env-height) / 2);
+  --animation-delay-base: 2s;
+  --animation-base-multiplicator: 3;
   --heart-width: 80px;
 }
 

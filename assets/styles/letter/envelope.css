@@ -15,52 +15,49 @@
   cursor: pointer;
 }
 
-.back,
-.front {
+#envelope .back,
+#envelope .front {
   position: absolute;
   width: 0;
   height: 0;
   max-width: 100%;
 }
 
-.back {
+#envelope .back {
   z-index: 1;
 }
 
-.front {
+#envelope .front {
   z-index: 3;
 }
 
-/* Old Letter Cover Texture */
-.back.pocket::after,
-.front.flap::after,
-.front.pocket::after {
+#envelope .front.flap::after {
   content: "";
-  background-image: url(/assets/images/letter/old-letter-texture.jpg);
-  opacity: 0.3;
-  position: absolute;
-  filter: blur(2px);
-  top: -50%;
-  left: -50%;
   display: inline-block;
-  width: var(--env-width);
-  max-width: 100%;
-  height: var(--env-height);
-  z-index: 100;
-  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -125px);
+  width: 332px;
+  z-index: 10;
+  border-top: 150px solid var(--color-flap);
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom-left-radius: 260px;
+  border-bottom-right-radius: 260px;
 }
 
-.front.flap {
+#envelope .front.flap {
   border-left: var(--env-border-width) solid transparent;
   border-right: var(--env-border-width) solid transparent;
   border-bottom: var(--env-border-height) solid transparent;
   border-top: var(--env-border-height) solid var(--color-flap);
   transform-origin: top;
   pointer-events: none;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-.back.pocket {
+#envelope .back.pocket {
   border-left: var(--env-border-width) solid var(--color-env);
   border-right: var(--env-border-width) solid var(--color-env);
   border-bottom: var(--env-border-height) solid var(--color-env);
@@ -71,7 +68,7 @@
   border-radius: 8px;
 }
 
-.front.pocket {
+#envelope .front.pocket {
   border-left: var(--env-border-width) solid var(--color-env);
   border-right: var(--env-border-width) solid var(--color-env);
   border-bottom: var(--env-border-height) solid var(--color-env2);
@@ -83,7 +80,8 @@
 
 #envelope.open {
   transform: translateY(calc(var(--env-height) / 4));
-  transition: opacity 1s, transform 1s ease, z-index 0.6s, visibility 0.8s;
+  transition: opacity 1s 1s, transform 1s 1s ease, z-index 0.6s 1s,
+    visibility 0.8s 1s;
   opacity: 0;
   visibility: hidden;
   z-index: 1;
@@ -116,18 +114,21 @@
 }
 #letter.close * {
   animation-play-state: paused;
+  opacity: 0;
 }
 
 #letter.open {
   top: 50%;
-  transition: width 1s 0.5s ease-in-out, top 0.4s 0.6s ease,
-    height 1s 0.5s ease-in-out, z-index 0.6s 1s;
+  transition: width 1s 1.5s ease-in-out, top 0.4s 0.6s ease,
+    height 1s 2s ease-in-out, z-index 0.6s 1s;
   z-index: 2;
   width: calc(100% - 1rem);
   height: calc(100% - 1rem);
 }
 
 #letter.open * {
-  animation-delay: 2s;
+  animation-delay: var(--animation-delay-base);
   animation-play-state: running;
+  opacity: 1;
+  transition: opacity calc(var(--animation-delay-base) * 2.5) ease-in-out;
 }
