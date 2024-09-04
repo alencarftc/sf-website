@@ -1,14 +1,17 @@
 window.onload = function () {
   const letter = document.querySelector("#letter");
-  const envelope = document.querySelector("#envelope")
+  const envelope = document.querySelector("#envelope");
 
   envelope.addEventListener("click", function () {
     open();
   });
 
   function open() {
-    letter.classList.add("open")
-    letter.classList.remove("close")
+    var audio = new Audio("./assets/audios/instrumental.mp3");
+    audio.play();
+
+    letter.classList.add("open");
+    letter.classList.remove("close");
     envelope.classList.add("open");
     envelope.classList.remove("close");
   }

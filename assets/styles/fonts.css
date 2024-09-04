@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Cantata One";
+  src: url("../fonts/CantataOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Great Vibes";
+  src: url("../fonts/GreatVibes-Regular.ttf") format("truetype");
+}
